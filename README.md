@@ -39,9 +39,12 @@ python ./manage.py collectstatic                    # Collect Static files in pr
 
 sudo service nginx restart                          # Restart Nginx Server to take effect
 
+
+
 # Let gunicorn communicate to nginx via unix socket
 gunicorn --workers 3 --bind unix:/home/prasad/env/django_deploy/django_deploy.sock deployment_project.wsgi
 
 Copy the Content of dist to /var/www/html/   # Server Static files
+To change the static file path edit in /etc/nginx/sites-available/default
 
 ```
