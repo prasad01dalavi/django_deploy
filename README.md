@@ -35,13 +35,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')     # Add this to djago_deploy/s
 
 python ./manage.py collectstatic                    # Collect Static files in project folder
 
-
+sudo service nginx restart                          # Restart Nginx Server to take effect
 
 # Let gunicorn communicate to nginx via unix socket
 gunicorn --workers 3 --bind unix:/home/prasad/env/django_deploy/django_deploy.sock deployment_project.wsgi
-
-
-
-
 
 ```
