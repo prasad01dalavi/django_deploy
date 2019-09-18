@@ -2,6 +2,8 @@
 Django Project Deployement on GCP
 
 ```
+pip install django-cors-headers
+
 netstat -tlnp                                               # show open tcp ports
 
 pip install gunicorn                                        # Install Gunicorn
