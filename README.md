@@ -42,4 +42,6 @@ sudo service nginx restart                          # Restart Nginx Server to ta
 # Let gunicorn communicate to nginx via unix socket
 gunicorn --workers 3 --bind unix:/home/prasad/env/django_deploy/django_deploy.sock deployment_project.wsgi
 
+Copy the Content of dist to /var/www/html/   # Server Static files
+
 ```
